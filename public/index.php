@@ -12,8 +12,6 @@ error_reporting(E_ALL);
 require __DIR__ . '/../lib/functions.php';
 
 // l'exemple avec le header, à vous de jouer pour le reste
+
 getPart('header');
-
-include "../parts/header.php";
-
-include "../parts/footer.php";
+getPart('footer');
