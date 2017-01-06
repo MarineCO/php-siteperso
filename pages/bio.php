@@ -1,3 +1,32 @@
+<?php $data = getUserData('../data/user.json'); ?>
+
+<div>
+
+	<h2>Affichage des données utilisateur :</h2>
+
+	<h3>
+		<?= $data->name ?>
+	</h3>
+	<h3>
+		<?= $data->first_name ?>
+	</h3>
+	<h3>
+		<?= $data->occupation ?>
+	</h3>
+	<h3>
+		<?php foreach ($data->experiences as $val): ?>
+			
+			<h4>
+				<?= $val->year ?>
+			</h4>
+			<h4>
+				<?= $val->company ?>
+			</h4>
+
+		<?php endforeach ?>
+	</h3>
+
+</div>
 
 <h2>Web Développeuse</h2>
 
