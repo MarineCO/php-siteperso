@@ -1,6 +1,6 @@
 <?php
 
-// Fonctions utiles dans le site.
+// Fonction permettant affichage des différentes pages
 
 function getContent(){
 	if(!isset($_GET['page'])){
@@ -10,6 +10,20 @@ function getContent(){
 	}
 }
 
+/* Fonction permettant l'inclusion du contenu d'un fichier dans un autre */
+
 function getPart($name){
 	include __DIR__ . '/../parts/'. $name . '.php';
 }
+
+/* Fonction permettant de récupérer le contenu du fichier 'data/user.json' via 'file_get_contents' + json to tableau PHP via 'json_decode' + affichage infos recueillies*/
+
+function getUserData() {
+	$path = '../data/user.json';
+
+	$userData = file_get_contents($path);
+	//echo $userData;
+
+	return json_decode($userData);
+}
+
