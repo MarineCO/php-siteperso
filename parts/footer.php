@@ -4,6 +4,6 @@
 	<div>Projets</div>
 	<div>Contact</div>
 
-	<script></script>
+	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
